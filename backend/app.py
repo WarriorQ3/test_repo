@@ -6,7 +6,7 @@ class SimpleHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
-        self.wfile.write(b"Hello from Effective Mobile!")
+        self.wfile.write(b"Hello from Effective Mobile!\n")
 
 def run(server_class=HTTPServer, handler_class=SimpleHandler, port=8080):
     server_address = ('', port)
